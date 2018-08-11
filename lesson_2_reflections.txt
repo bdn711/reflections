@@ -1,28 +1,60 @@
 
 git init initialized a new empty git repository
 git status shows which files have changed since the last commit
+git add FILENAME adds a file to the staging area in preparation for being
+    included in a new commit
+git commit to create a new commit (this will open the previously programmed
+    file editor, where you enter/save a commit message for the commit)
+git diff will compare the working directory to the staging area for differences
+git diff --staged will compare the staging area with the repository
+git reset --hard reset discards any changes in the working directory or staging
+    area
+git branch NEWBRANCHNAME creates a new branch
+git log --graph --oneline COMMITNAME1 COMMITNAME2 ETC
+git merge master BRANCHTOMERGE merges the master commit with a branch
+git show COMMIT shows what changes were introduced between a commit and its
+    parent
+git branch -d coins deletes a branch, but doesn't delete the commits in a branch,
+    but deletes the branch label
 
 ### REFLECTIONS
 
 What happens when you initialize a repository? Why do you need to do it?
 You initialize a git repository with the command "git init". Without doing this
 you won't be able to track commits. "git status" will show all current commits,
-as well as all "untracked files" that are currently in the same directory. To
-track, you use "git add"
+as well as all "untracked files" that are currently in the same directory.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
+The staging area is a planning area, where you can use to identify files from
+the working directory to be added to the repository. It allows you to think
+through what you want to include in your commit before actually creating the
+commit.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+You can check the difference between the staging area and the most recent
+commit using "git diff --staged". Then determine if the changes constitute one
+logical change before creating a new commit.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+Branches would be helpful when you are developing your program, experimenting
+with changes to your program, creating different versions of your program, such
+as an easy-mode on a game or a version in a different language.
 
 How do the diagrams help you visualize the branch structure?
+Diagrams help you keep everything straight as you can trace back directly on
+previous commits. It allows you to distinguish between reachable/unreachable
+commits.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+The changes in the branch are incorporated into the master (or currently checked
+out commit). The diagram helps us keep track of the differences before merging.
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+Git's automatic merging saves a ton of time and tedious work that would be
+necessary if doing changes manually. By automatically flagging conflicts it
+allows the user to decide what changes to make when changes aren't evident.
