@@ -1,0 +1,76 @@
+
+
+Windows Command Prompt - FC (file compare) old_file new_file (only shows sections with differences)
+
+Linux (Git Bash) - diff -u old_file new_file
+-lines w/o + or - sign havent changed
+- lines w/ + were added
+- lines w/ - were removed
+
+
+###Cloning and Exploring the Repo
+-To clone a repository, run git clone followed by a space and the repository URL.
+-To view the different commits for a repo, use git log
+-To stop viewing git log output, press q (which stands for quit).
+-To checkout a particular commit, enter git checkout followed by a space and the
+    commit id. Once you do this, you can run the file and it will run using the
+    checked out code.
+-Once you identify when an error occurred, you can use git diff (commit_v1)
+    (commit_v2) to identify the differences between two commits that might have led
+    to a bug.
+-Enter 'git log' after navigating to the repository to see all the commits for
+-that Repo
+
+How did viewing a diff between two versions of a file help you see the bug that
+    was introduced?
+
+    It made it easier to spot the bug as I didn't have to waste time looking
+    through lines that didn't change between the two versions.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    If you discover a bug, you can go back and troubleshoot to see when that bug
+    was first introduced and if needed you can revert back to an earlier, less
+    buggy version.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    MANUAL
+    PROS: each commit can be saved at a more logical stopping point
+    CONS: prone to user error (i.e. if we forget to create a new commit then we
+    could end up with some overly large commits)
+
+    AUTO-SAVE
+    PROS: not prone to user error, all changes are saved and can be reviewed
+    CONS: each commit isn't done at a logical stopping point and it can be
+    overwhelming to navigate so many commits
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    I think Git was designed for developers and larger/more complex projects
+    that require or are more manageable multiple files. Google Docs seems to
+    be tailored towards non-developers and/or smaller projects that can be held
+    within a single file
+
+How can you use the commands git log and git diff to view the history of files?
+
+    -To see a list of all the commits and their ids enter "git log" after
+    navigating to the repository.
+    -git diff (commit_v1) (commit_v2) shows the changes (insertions/deletions)
+    between two commits
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    It limits the consequences of making drastic changes because you can always
+    go back to the most recent working commit that you know functions properly
+    if needed.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    I want to use Git to become a more skilled data analyst and hopefully a data
+    scientist.
