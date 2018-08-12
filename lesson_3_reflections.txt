@@ -1,29 +1,65 @@
+git remote add origin URL sets up a remote to a repository on GitHub
+git remote shows all of the current remotes
+git remote -v shows a more verbose/detailed version of current remotes
+git push origin master pushing the origin remote master branch to GitHub
+git pull origin master pulls the origin remote master branch from GitHub to git
+git clone URL to clone a repository from github, automatically sets up a remote
+	pointing to repository on github
+git fetch updates the local copy of the remote branch without affecting the
+	local master copy. You can then git merge the two commits.
+	(git pull origin master is the same as git fetch origin, then git merge
+	master origin/master)
+git merge master origin/master to merge the local master commit with the origin/
+	master pulled from github that conflicts with the local master commit.
+
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+    When you are collaborating with others on a project where multiple people
+    are editing the code for the project.
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    You may not always want your most recent changes to be made public. Likewise,
+    if collaborating with others, you may not have the to modify the master
+    on GitHub.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Fill in your answer here
+    A fork is basically a clone of a github repository on github that is linked
+	to the original repository that it was copied from. A clone is a copy of a
+	repository (could be local or from github); however, it is not connected to
+	the original repository. A branch is a version of a repository that diverged
+	from the master commit. A branch can be merged back into the master commit
+	if desired. A fork should be used anytime you copy another repo from GitHub
+	to your github account. It baseically gives credit to the original user and
+	suggested changes can be implemented if desired by the original author.
+	Clones can be used when there's no need to link the copy to the original.
+	Branches should be used when experimenting with changes that you might want
+	to merge back into the original.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    This facilitates merges/pushes/pulls and helps us know how any new commits,
+	either locally or on github relate to each other.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    Without git or github, it would be extremely difficult to keep track and
+	reconcile changes made, especially if this is being done in collaboration
+	with others. Without git or github, we'd need to find some other online
+	platform to track changes and manage/save different versions. There might be
+	fewer commands to learn, which is about the only thing that might be easier,
+	but it seems like it would be more difficult in the long-run.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    When you are collaborating with others who should be aware of each of the
+	changes you are making. While making changes directly in the master is
+	easier and quicker, it makes it more difficult for others to see or review
+	the changes you are making.
