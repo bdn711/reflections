@@ -1,3 +1,5 @@
+LESSON 3 REFLECTIONS
+
 git remote add origin URL sets up a remote to a repository on GitHub
 git remote shows all of the current remotes
 git remote -v shows a more verbose/detailed version of current remotes
